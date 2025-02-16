@@ -1,6 +1,10 @@
 import streamlit as st
 import replicate
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 st.title("Real-ESRGAN Image Enhancement")
 
