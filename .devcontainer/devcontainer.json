@@ -1,0 +1,31 @@
+{
+  // กำหนดชื่อ Dev Container
+  "name": "Streamlit App Dev Container",
+
+  // ใช้ Python 3.10 เป็น Docker image พื้นฐาน
+  "image": "mcr.microsoft.com/devcontainers/python:3.10", 
+
+  // เปิดใช้ฟีเจอร์ Docker-in-Docker หากจำเป็นต้องใช้งาน Docker ภายใน Container
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // กำหนดให้ใช้ Bash เป็น default terminal
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",        // ติดตั้งส่วนขยาย Python ของ VS Code
+        "ms-python.vscode-pylance" // ใช้ Pylance เพื่อเพิ่มประสิทธิภาพการพัฒนา Python
+      ]
+    }
+  },
+
+  // คำสั่งที่จะรันหลังจากสร้าง Container สำเร็จ
+  "postCreateCommand": "pip install -r requirements.txt",
+
+  // กำหนดให้ใช้ user "vscode" ภายใน Container
+  "remoteUser": "vscode"
+}
