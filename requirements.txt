@@ -1,2 +1,7 @@
-streamlit==1.13.0
+altair==5.0.1
 replicate==0.8.0
+streamlit==1.13.0
+vega==0.9.0
+numpy==1.23.5
+pandas==1.5.2
+Pillow==9.4.0
